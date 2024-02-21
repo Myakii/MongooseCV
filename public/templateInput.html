@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV</title>
+</head>
+
+<body>
+    <link href='https://fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic' rel='stylesheet'
+        type='text/css'>
+    <style>
+        @import url(https://weloveiconfonts.com/api/?family=entypo|fontawesome);
+
+        /* entypo */
+        [class*="entypo-"]:before {
+            font-family: 'entypo', sans-serif;
+        }
+
+        /* fontawesome */
+        [class*="fontawesome-"]:before {
+            font-family: 'FontAwesome', sans-serif;
+        }
+
+        /* Utils */
+
+        .purple {
+            color: #3a19a8;
+        }
+
+        .block {
+            margin: 25px 30px;
+        }
+
+        /* Main tags */
+
+        body {
+            padding: 0;
+            margin: 0;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4 {
+            font-family: 'Lato', Helvetica, sans-serif;
+            font-weight: 300;
+            color: #48DA9B;
+        }
+
+        h1 {
+            font-size: 48px;
+            font-weight: 300;
+            margin: 20px 0;
+        }
+
+        h2 {
+            font-size: 28px;
+            margin: 32px 0 24px;
+        }
+
+        h3 {
+            font-size: 24px;
+        }
+
+        h4 {
+            font-size: 18px;
+            font-weight: 400;
+        }
+
+        blockquote {
+            font-style: italic;
+            margin: 25px 0;
+            padding-left: 20px;
+            border-left: 2px solid #48DA9B;
+        }
+
+        blockquote,
+        p,
+        a,
+        li {
+            font-family: 'Lato', Helvetica, sans-serif;
+            font-weight: 300;
+            font-size: 15px;
+        }
+
+        a:focus {
+            outline: none;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        li {
+            padding-left: 1em;
+            text-indent: -.7em;
+        }
+
+        li:before {
+            content: "• ";
+            color: #c4b5f5;
+            font-size: 20px;
+            padding-right: 8px;
+        }
+
+        /* Containers size */
+
+        #main_container {
+            height: 100vh;
+            width: 800px;
+            padding-left: 10px;
+        }
+
+        #header {
+            height: 130px;
+            border-bottom: 1px solid #403F44;
+        }
+
+        .header_logotype_container {
+            width: 260px;
+            height: 130px;
+            border-right: 1px solid #403F44;
+            float: left;
+        }
+
+        .header_right_container {
+            height: 130px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+        }
+
+        .header_right_container a {
+            text-decoration: none;
+            color: #c4b5f5;
+        }
+
+        #left_col {
+            width: 260px;
+            float: left;
+        }
+
+        #content_container {
+            width: 530px;
+            border-left: 1px solid #403F44;
+            float: left;
+        }
+
+        /* HEADER */
+
+        .logotype_name {
+            text-transform: uppercase;
+            font-size: 32px;
+            margin: 43px 0 0;
+        }
+
+        .logotype_occupation {
+            text-transform: uppercase;
+            margin-top: 5px;
+            color: #5ce2af;
+            font-size: 14px;
+            letter-spacing: 2px;
+            padding-left: 7px;
+        }
+
+        /* LEFT NAV */
+
+        .hello_content,
+        .contact_details_content {
+            margin-top: 25px;
+        }
+
+        .hello_content {
+            width: 230px;
+        }
+
+        .contact_details_content h2+p.purple {
+            margin-top: 10px;
+        }
+
+        .contact_details_content p {
+            margin: 0;
+        }
+
+        .contact_details_content p.purple {
+            margin-top: 25px;
+        }
+
+        .content {
+            text-align: center;
+            color: #04080b;
+            width: 100%;
+            height: 40px;
+            position: absolute;
+            z-index: 2;
+            font: 18px 'Lato', Arial, sans-serif;
+            margin: 0;
+            padding: 16px 0 0;
+            top: -4px;
+            bottom: 10px;
+            border-top: 1px solid #403F44;
+            border-bottom: 1px solid #403F44;
+        }
+    </style>
+    <form method="POST" action="/submitForm">
+        <!-- MAIN CONTAINER -->
+        <div id="main_container">
+            <!-- HEADER -->
+            <div id="header">
+                <!-- LOGOTYPE/NAME -->
+                <div class="header_logotype_container">
+                    <input type="text" class="logotype_name" name="first_name">
+                    <input type="text" class="logotype_surname purple" name="last_name">
+                    <input type="text" class="logotype_occupation" name="title">
+                </div>
+                <div class="header_right_container">
+                </div>
+            </div>
+            <!-- LEFT COL -->
+            <div id="left_col">
+                <div class="hello_content">
+                    <h2>Hello!</h2>
+                    <input type="text" class="hello_content_text" name="hello_content">
+                </div>
+                <div class="contact_details_content">
+                    <h2>Détails de contact</h2>
+                    <p class="purple">Téléphone :</p>
+                    <input type="number" class="phone" name="phone">
+                    <p class="purple">Email :</p>
+                    <input type="text" class="email" name="email">
+                    <p class="purple">Ville :</p>
+                    <input type="text" class="city" name="city">
+                    <p class="purple">Code postal :</p>
+                    <input type="number" class="zipcode" name="zipcode">
+                </div>
+            </div>
+            <!-- PROFILE CONTENT -->
+            <div id="content_container">
+                <div class="block">
+                    <h2>Expériences</h2>
+                    <ul>
+                        <li><strong>Entreprise :</strong> <input type="text" class="experience_company"
+                                name="experience[0][company]"></li>
+                        <li><strong>Poste :</strong> <input type="text" class="experience_position"
+                                name="experience[0][poste]"></li>
+                        <li><strong>Dates :</strong> <input type="text" class="experience_dates"
+                                name="experience[0][date]"></li>
+                        <li><strong>Description :</strong> <input type="text" class="experience_description"
+                                name="experience[0][description]"></li>
+                    </ul>
+                    <ul>
+                        <li><strong>Entreprise :</strong> <input type="text" class="experience_company"
+                                name="experience[1][company]"></li>
+                        <li><strong>Poste :</strong> <input type="text" class="experience_position"
+                                name="experience[1][poste]"></li>
+                        <li><strong>Dates :</strong> <input type="text" class="experience_dates"
+                                name="experience[1][date]"></li>
+                        <li><strong>Description :</strong> <input type="text" class="experience_description"
+                                name="experience[1][description]"></li>
+                    </ul>
+                </div>
+                <div class="block">
+                    <h2>Compétences</h2>
+                    <input type="text" class="skills" name="skills[]">
+                    <input type="text" class="skills" name="skills[]">
+                    <h2>Hobbies</h2>
+                    <input type="text" class="hobbies" name="hobbies[]">
+                    <input type="text" class="hobbies" name="hobbies[]">
+                </div>
+
+            </div>
+            <button type="submit">Ajouter</button>
+        </div>
+    </form>
+</body>
+
+</html>
